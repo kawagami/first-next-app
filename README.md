@@ -1,7 +1,13 @@
 # 預計之後當作主頁面的 next ssr 專案
 * 建構中
-* 目前在此專案上層使用以下 docker-compose.yml 設定建立開發環境
+
+# 開發環境
+* git clone 此專案後先在此專案根目錄執行以下指令
+```shell
+docker run --rm -it -u $(id -u):$(id -g) -w /app -v $PWD:/app node:21-slim npm install
 ```
+* npm install 之後可在此專案上層(cd ..)使用以下 docker-compose.yml 設定建立開發環境，亦可自行調整 docker-compose.yml 設定來改變專案資料夾結構
+```yaml
 version: "3"
 
 services:
